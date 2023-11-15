@@ -4,7 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/images/book-favicon.ico" />
-    <title>Arthur's Library</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>My Library</title>
   </head>
-  <body></body>
+  <body>
+    <script src="script.js"></script>
+    <header>
+      <div>
+        <img src="images/book-logo.svg" alt="Book Logo" />
+        <h1>My Library</h1>
+      </div>
+    </header>
+    <div>
+      <section>
+        <div>
+          <button>
+            <object
+              type="image/svg+xml"
+              data="/images/cross.svg"
+              onload="unpackSVG(this)"
+            ></object>
+          </button>
+          <h2>The Catcher in the Rye</h2>
+          <p>Book by J. D. Salinger</p>
+          <p>196 pages</p>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2023 Arthur Levitsky</p>
+      <a href="https://www.github.com/artsky-github"
+        ><img src="/images/github.svg" alt="Github SVG Icon"
+      /></a>
+    </footer>
+  </body>
 </html>
