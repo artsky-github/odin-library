@@ -4,7 +4,33 @@ section {
   color: white;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
+
+section > button {
+  align-self: center;
+  border: none;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  background: transparent;
+}
+
+#add-icon {
+  width: inherit;
+  height: inherit;
+  fill: rgb(118, 135, 152, 0.5);
+  transition: 0.5s ease;
+}
+
+#add-icon:hover {
+  cursor: pointer;
+  transform: rotate(1turn);
+  fill: rgb(255, 160, 122, 0.5);
+}
+
+/*
 
 section > div {
   display: flex;
@@ -23,10 +49,6 @@ section > div > h2 {
   font-size: 20pt;
 }
 
-section > div > button > img {
-  width: 20px;
-}
-
 section > div > button {
   align-self: end;
 }
@@ -36,14 +58,15 @@ button {
   border: none;
 }
 
-svg {
+section > div > button > svg {
   width: 25px;
   height: 25px;
   transition: 0.5s ease;
 }
 
-svg:hover {
+section > div > button > svg:hover {
   fill: red;
   transform: scale(1.2);
   cursor: pointer;
 }
+*/
