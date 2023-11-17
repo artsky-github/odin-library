@@ -17,7 +17,7 @@ dialog::backdrop {
 
 dialog > form {
   display: grid;
-  grid-template: repeat(4, 1fr) / repeat(2, min-content);
+  grid-template: repeat(5, 1fr) / repeat(2, min-content);
   align-items: center;
   row-gap: 10px;
   column-gap: 30px;
@@ -84,4 +84,22 @@ input[type="checkbox"]:checked {
   background-image: url("/images/checkmark.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+dialog > form > button {
+  grid-column: 1 / 3;
+  justify-self: center;
+  width: min-content;
+  color: white;
+  font-size: 12pt;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: lightslategray;
+  transition: 0.2s ease;
+}
+
+dialog > form > button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
