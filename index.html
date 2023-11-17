@@ -9,11 +9,22 @@
   </head>
   <body>
     <dialog id="dialog-box">
+      <button id="close-modal">
+        <object
+          type="image/svg+xml"
+          data="/images/cross.svg"
+          onload="unpackSVG(this)"
+        ></object>
+      </button>
       <form>
-        <input type="text" name="title" /><input
-          type="text"
-          name="author"
-        /><input type="number" name="pages" /><input type="checkbox" />
+        <label for="title">Title</label><input type="text" name="title" /><label
+          for="author"
+          >Author</label
+        ><input type="text" name="author" /><label for="pages">Pages</label
+        ><input type="number" name="pages" />
+        <div>
+          <label for="read">Read</label><input name="read" type="checkbox" />
+        </div>
       </form>
     </dialog>
     <header>
@@ -24,7 +35,7 @@
     </header>
     <div>
       <section>
-        <button id="add-book">
+        <button id="open-modal">
           <object
             data="./images/add.svg"
             type="image/svg+xml"

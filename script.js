@@ -18,7 +18,12 @@ function unpackSVG(objectElement) {
   );
 }
 
-document.querySelector("#add-book").addEventListener("click", () => {
-  const dialog = document.querySelector("#dialog-box");
+const dialog = document.querySelector("#dialog-box");
+
+document.querySelector("#open-modal").addEventListener("click", () => {
   dialog.showModal();
+});
+
+document.querySelector("#close-modal").addEventListener("click", () => {
+  dialog.close();
 });

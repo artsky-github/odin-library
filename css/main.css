@@ -37,3 +37,7 @@ section {
 footer {
   background-color: lightslategray;
 }
+
+input:focus {
+  outline: none;
+}
