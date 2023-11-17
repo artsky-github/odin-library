@@ -18,6 +18,7 @@ function unpackSVG(objectElement) {
   );
 }
 
-addBookToLibrary("Interesting", "Author", "123", true);
-addBookToLibrary("Interestaasding", "Author", "123", false);
-console.log(myLibrary);
+document.querySelector("#add-book").addEventListener("click", () => {
+  const dialog = document.querySelector("#dialog-box");
+  dialog.showModal();
+});

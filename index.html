@@ -8,7 +8,14 @@
     <title>My Library</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <dialog id="dialog-box">
+      <form>
+        <input type="text" name="title" /><input
+          type="text"
+          name="author"
+        /><input type="number" name="pages" /><input type="checkbox" />
+      </form>
+    </dialog>
     <header>
       <div>
         <img src="./images/book-logo.svg" alt="Book Logo" />
@@ -17,7 +24,7 @@
     </header>
     <div>
       <section>
-        <button>
+        <button id="add-book">
           <object
             data="./images/add.svg"
             type="image/svg+xml"
@@ -45,5 +52,6 @@
         ><img src="./images/github.svg" alt="Github SVG Icon"
       /></a>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

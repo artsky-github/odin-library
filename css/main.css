@@ -2,6 +2,7 @@
 @import "mw-reset.css";
 @import "header.css";
 @import "section.css";
+@import "dialog.css";
 @import "footer.css";
 
 :root {

@@ -1,0 +1,31 @@
+dialog {
+  border: none;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: white;
+  animation: expand-box 0.2s ease forwards;
+}
+
+dialog::backdrop {
+  background: rgb(0, 0, 0, 0.5);
+}
+
+dialog > form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+dialog > form > input {
+  padding: 10px;
+  font-size: 12pt;
+}
+
+@keyframes expand-box {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
