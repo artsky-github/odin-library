@@ -3,7 +3,9 @@ section {
   font-size: 14pt;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 25px;
 }
@@ -30,26 +32,33 @@ section > button {
   fill: rgb(255, 160, 122, 0.5);
 }
 
-/*
+section > #book-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  width: 80%;
+  gap: 20px;
+}
 
-section > div {
+section > #book-card-container > div {
+  justify-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   width: 300px;
   height: 150px;
+  align-items: center;
   padding: 20px;
   border-radius: 25px;
   background: linear-gradient(0deg, #778899, #ffa07b);
 }
 
-section > div > h2 {
+section > #book-card-container > div > h2 {
+  text-align: center;
   font-weight: bolder;
   font-size: 20pt;
 }
 
-section > div > button {
+section > #book-card-container > div > button {
   align-self: end;
 }
 
@@ -58,15 +67,14 @@ button {
   border: none;
 }
 
-section > div > button > svg {
+section > #book-card-container > div > button > svg {
   width: 25px;
   height: 25px;
   transition: 0.5s ease;
 }
 
-section > div > button > svg:hover {
+section > #book-card-container > div > button > svg:hover {
   fill: red;
   transform: scale(1.2);
   cursor: pointer;
 }
-*/

@@ -16,7 +16,7 @@
           onload="unpackSVG(this)"
         ></object>
       </button>
-      <form>
+      <form action="" method="post" id="book-form">
         <label for="title">Title</label
         ><input type="text" name="title" required /><label for="author"
           >Author</label
@@ -27,7 +27,7 @@
         <div>
           <label for="read">Read</label><input name="read" type="checkbox" />
         </div>
-        <button>Submit</button>
+        <button type="submit" form="book-form">Add Book</button>
       </form>
     </dialog>
     <header>
@@ -38,6 +38,7 @@
     </header>
     <div>
       <section>
+        <div id="book-card-container"></div>
         <button id="open-modal">
           <object
             data="./images/add.svg"
@@ -45,19 +46,6 @@
             onload="unpackSVG(this)"
           ></object>
         </button>
-        <!--
-        <div>
-          <button>
-            <object
-              type="image/svg+xml"
-              data="/images/cross.svg"
-              onload="unpackSVG(this)"
-            ></object>
-          </button>
-          <h2>The Catcher in the Rye</h2>
-          <p>Book by J. D. Salinger</p>
-          <p>196 pages</p>
-        </div>-->
       </section>
     </div>
     <footer>
