@@ -41,7 +41,7 @@ function createCard(title, author, page) {
   cardContainer.appendChild(exitButton);
   exitButton.appendChild(document.createElement("object"));
   exitButton.firstChild.type = "image/svg+xml";
-  exitButton.firstChild.data = "/images/cross.svg";
+  exitButton.firstChild.data = "./images/cross.svg";
   exitButton.firstChild.addEventListener("load", () => {
     exitButton.replaceChild(
       exitButton.firstChild.contentDocument.documentElement,
