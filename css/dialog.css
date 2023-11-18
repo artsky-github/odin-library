@@ -50,6 +50,7 @@ dialog > form > label {
   text-align: right;
 }
 
+dialog > form > div:first-of-type > input,
 dialog > form > input {
   font-size: 12pt;
   padding: 10px;
@@ -57,7 +58,7 @@ dialog > form > input {
   border-bottom: 1px solid lightgray;
 }
 
-dialog > form > div {
+dialog > form > div:last-of-type {
   grid-column: 1/ 3;
   display: flex;
   justify-content: center;
