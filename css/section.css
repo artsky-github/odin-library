@@ -19,14 +19,14 @@ section > button {
   background: transparent;
 }
 
-#add-icon {
+section > button > svg {
   width: inherit;
   height: inherit;
   fill: rgb(118, 135, 152, 0.5);
   transition: 0.5s ease;
 }
 
-#add-icon:hover {
+section > button > svg:hover {
   cursor: pointer;
   transform: rotate(1turn);
   fill: rgb(255, 160, 122, 0.5);

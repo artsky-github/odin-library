@@ -25,10 +25,6 @@ function unpackSVG(objectElement) {
 
 const dialog = document.querySelector("#dialog-box");
 
-document.querySelector("#open-modal").addEventListener("click", () => {
-  dialog.showModal();
-});
-
 document.querySelector("#close-modal").addEventListener("click", () => {
   dialog.close();
 });
@@ -69,7 +65,10 @@ function createCard(title, author, page, read, bookObj) {
   });
   exitButton.addEventListener("click", () => {
     myLibrary.splice(myLibrary.indexOf(bookObj), 1);
-
+    if (myLibrary.length === 0) {
+      button.remove();
+      document.querySelector("#section").appendChild(button);
+    }
     cardContainer.remove();
   });
   titleHeader.innerHTML = `${title}`;
@@ -86,6 +85,8 @@ function createCard(title, author, page, read, bookObj) {
 }
 
 const errorText = createError();
+const button = createModalButton();
+document.querySelector("#section").appendChild(button);
 document.querySelector("#book-form").addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -97,6 +98,8 @@ document.querySelector("#book-form").addEventListener("submit", (e) => {
       e.target["read"].checked
     );
 
+    button.remove();
+    document.querySelector("#header").appendChild(button);
     dialog.close();
   } else {
     for (book of myLibrary) {
@@ -133,4 +136,22 @@ function createError() {
   error.style.marginTop = "5px";
   error.style.gridColumn = "1 / 3";
   return error;
+}
+
+function createModalButton() {
+  const button = document.createElement("button");
+  appendChildFile("./images/add.svg", button);
+  button.setAttribute("id", "open-modal");
+  button.addEventListener("click", () => {
+    dialog.showModal();
+  });
+  return button;
+}
+
+function appendChildFile(extension, item) {
+  fetch(`${extension}`)
+    .then((response) => response.text())
+    .then((data) => {
+      item.innerHTML = data;
+    });
 }

@@ -1,6 +1,8 @@
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px;
   padding: 25px;
 }
 
@@ -15,8 +17,19 @@ header > div > h1 {
   color: white;
   font-family: var(--kanit, --system-ui);
   font-size: 30pt;
+  white-space: nowrap;
 }
 
 header > div > img {
   width: 80px;
+}
+
+header > button > svg {
+  fill: white;
+  transition: 0.5s ease;
+}
+
+header > button > svg:hover {
+  cursor: pointer;
+  transform: rotate(1turn);
 }

@@ -15,7 +15,7 @@ body {
   box-sizing: border-box;
   height: 100vh;
   display: grid;
-  grid-template-rows: 150px 1fr 150px;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 header {
